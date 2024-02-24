@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <form action="/summarized" method="post">
+        <label for="book_sections">Choose a Section:</label>
+        <select name="book_sections" id="book_sections">
+          {% for item in data %}
+          <option value="`{{item}}`">{{item}}</option>
+          {% endfor %}
+        </select>
+        <br /><br />
+        <input type="submit" value="Summarize" />
+        <input type="submit" value="Paraphrase" formaction="/paraphrased" />
+      </form>
+    </ul>
+  </body>
+</html>
