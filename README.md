@@ -1,3 +1,7 @@
+## WIKIPEDIA API
+
+You can find the service live [here](https://wikipedia-api-7rjp.onrender.com/summarized).
+
 ### Run Using Docker
 
 1. Create an .env file.(check env.example)
