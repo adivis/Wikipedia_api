@@ -109,8 +109,8 @@ def paraphrase():
             get_sub_sections(section.sections, sub_sections)
 
             sys_content = "You are a helpful assistant."
-            user_content = "Paraphrase " + str(sub_sections) + " sections of " + full_url + " in minimum 100 words each"
-            key = selected_section['title']+"_summarized"
+            user_content = "Paraphrase " + str(sub_sections) + " sections of " + full_url +" in detail"
+            key = selected_section['title']+"_paraphrased"
             if key not in selected_section.keys():
                 selected_section[key] = call_openai(sys_content, user_content)
 
@@ -121,3 +121,6 @@ def paraphrase():
         except Exception as e:
             print('Error! {c}, Message: {m}'.format(c=type(e).__name__, m=str(e)))
             return render_template("display_text.html", data="Error has occured")
+
+if __name__ == "__main__":
+    app.run(debug=True)

@@ -1,0 +1,9 @@
+version: "1"
+services:
+  web:
+    image: adiwish/wikipedia-api
+    command: "python3 -m flask --app application run --host=0.0.0.0"
+    env_file:
+      - .env
+    ports:
+      - "5000:5000"
