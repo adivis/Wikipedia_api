@@ -1,6 +1,6 @@
 ## WIKIPEDIA API
 
-You can find the service live [here](https://wikipedia-api-7rjp.onrender.com/summarized).
+You can find the service live [here](https://wikipedia-api-7rjp.onrender.com/).
 
 ### Run Using Docker
 
