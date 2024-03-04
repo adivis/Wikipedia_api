@@ -8,7 +8,6 @@ app = Flask(__name__)
 
 full_url = ""
 user_agent = 'Wikipedia-API ('+os.environ.get("MAIL")+')'
-print(user_agent)
 sections = []
 selected_section = {}
 
@@ -81,8 +80,7 @@ def summarize():
             key = selected_section['title']+"_summarized"
             if key not in selected_section.keys():
                 selected_section[key] = call_openai(sys_content, user_content)
-            else:
-                print("$$$$$$$$$$$")
+            
             return render_template("display_text.html", data={
                 "funtionality": "Summarized",
                 "text": selected_section[key]
